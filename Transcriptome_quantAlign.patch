@@ -1,6 +1,0 @@
-67c67,69
-<                     aT.shiftSJ[iex]={0,0};
----
->                     auto init = std::initializer_list<long long unsigned int>({0,0});
->                     std::copy(init.begin(), init.end(), aT.shiftSJ[iex]);
->                     // aT.shiftSJ[iex]=std::initializer_list<long long unsigned int>({0,0});

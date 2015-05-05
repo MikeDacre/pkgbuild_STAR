@@ -1,6 +1,6 @@
 # Maintainer: Mike Dacre <mike.dacre@gmail.com>
 pkgname=star_rna-seq
-pkgver=2.4.1b
+pkgver=2.4.1c
 pkgrel=1
 pkgdesc="RNA-seq spliced transcripts alignment to a reference"
 arch=('x86_64' 'i686')
@@ -9,16 +9,14 @@ license=('GPL')
 groups=('science' 'alignment')
 depends=('samtools')
 provides=('STAR')
-source=("https://github.com/alexdobin/STAR/archive/STAR_$pkgver.tar.gz"
-        "Transcriptome_quantAlign.patch")
+source=("https://github.com/alexdobin/STAR/archive/STAR_$pkgver.tar.gz")
 
-md5sums=('2b50a79d973b91881e9e132362988e9c'
-         'c0f7b569189a9caff64784a19f97ec12')
+        md5sums=('0870f2ed9f2415579027e394f4dc0ce8')
 
-prepare() {
-  cd "$srcdir/STAR-STAR_$pkgver/source"
-  patch Transcriptome_quantAlign.cpp < "$srcdir/Transcriptome_quantAlign.patch"
-}
+# prepare() {
+  # cd "$srcdir/STAR-STAR_$pkgver/source"
+  # patch Transcriptome_quantAlign.cpp < "$srcdir/Transcriptome_quantAlign.patch"
+# }
 
 build() {
   cd "$srcdir/STAR-STAR_$pkgver/source"
