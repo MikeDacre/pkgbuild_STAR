@@ -1,5 +1,5 @@
 # Maintainer: Mike Dacre <mike.dacre@gmail.com>
-pkgname=star
+pkgname=star_rna-seq
 pkgver=2.4.1b
 pkgrel=1
 pkgdesc="RNA-seq spliced transcripts alignment to a reference"
@@ -33,7 +33,4 @@ package() {
   install -m644 "$srcdir/STAR-STAR_$pkgver/LICENSE" "$pkgdir/usr/share/licenses/star/LICENSE"
   install -m644 "$srcdir/STAR-STAR_$pkgver/doc/STARmanual.pdf" "$pkgdir/usr/share/star/STARmanual.pdf"
   cd "$pkgdir/usr/bin"
-
-  # Make a lowercase version
-  ln -s STAR star
 }
